@@ -353,29 +353,29 @@ header .section1 .block:nth-child(1) ul li a:hover {
     content: "\f002";
 }
 
-.section2 {
+header .section2 {
     margin: 20px 0px;
 }
 
-.section2 ul li {
+header .section2 ul li {
     padding: 10px;
 }
 
-.section2 ul li:not(:last-child) {
+header .section2 ul li:not(:last-child) {
     border-right: solid 5px #949494;
 }
 
-.section2 ul li:hover {
+header .section2 ul li:hover {
     background-color: wheat;
 }
 
-.section2 ul li a {
+header .section2 ul li a {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: large;
     color: #0889b4;
 }
 
-.section2 ul li p {
+header .section2 ul li p {
     color: #9E9B96;
     font-size: small;
 }
@@ -389,6 +389,294 @@ header .section1 .block:nth-child(1) ul li a:hover {
 /*=================================
   main styling starts here
 =================================*/
+
+main {
+    display: flex;
+}
+
+main .section1 {
+    flex: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #9e927f73;
+    margin-right: 10px;
+}
+
+main .section2 {
+    flex: 20%;
+}
+
+main .section1 .sec-wrap {
+    display: flex;
+}
+
+.sec-1 {
+    border-right: solid 1px #949494;
+    padding: 15px;
+    text-align: right;
+    font-size: small;
+    height: 50rem;
+}
+
+.sec-1 li {
+    margin: 22px 0px;
+}
+
+.sec-1 li:nth-child(1) h3 {
+    font-size: x-large;
+    color: #0889b4;
+    font-weight: bolder;
+}
+
+.sec-1 li h3 {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.sec-1 li h4 {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.sec-2 {
+    padding: 0px 20px;
+}
+
+.sec-2 h2 {
+    font-size: x-large;
+    margin: 15px 0px 25px;
+}
+
+.sec-2 p {
+    font-size: small;
+    line-height: 1rem;
+    margin: 15px 0px;
+}
+
+.sec-2 figure {
+    margin: 20px 0px;
+}
+
+.r-arrow::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f061";
+}
+
+.comentarios h3 {
+    font-size: x-large;
+    font-weight: bold;
+    color: #0889b4;
+    margin: 20px 25px;
+}
+
+.review {
+    padding: 15px;
+    margin: 15px 0px;
+    display: flex;
+}
+
+.deja {
+    width: 100%;
+}
+
+.deja h2 {
+    font-size: x-large;
+    margin: 20px 25px;
+}
+
+.deja form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.deja form .part1,
+.part2 {
+    padding: 20px;
+}
+
+.deja form .part1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.deja form .part1 p {
+    font-size: smaller;
+    margin: 8px 0px 2px;
+    color: #777676;
+}
+
+.deja form .part1 input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.deja form .part1 input[type~="submit"] {
+    all: unset;
+    font-weight: bolder;
+    padding: 10px;
+    background-color: rgb(158, 132, 83);
+    color: white;
+    margin: 10px 0px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: font-size 1s;
+}
+
+.deja form .part1 input[type~="submit"]:hover {
+    background-color: #66C6E6;
+    font-size: larger;
+}
+
+.deja form .part2 p {
+    font-size: smaller;
+    margin: 8px 0px 2px;
+    color: #777676;
+}
+
+.deja form .part2 textarea {
+    display: block;
+    width: 94%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+
+/* ++++++++++++++ section 1 end ++++++++++++++++ */
+
+.ingrese {
+    margin-bottom: 25px;
+}
+
+.ingrese p {
+    text-align: right;
+    font-size: small;
+    color: #0889b4;
+}
+
+.search-blue {
+    position: relative;
+    display: grid;
+}
+
+.search-blue input {
+    border: solid 4px #0889b4;
+    padding: 5px;
+    outline: none;
+}
+
+.search-blue .a-right {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: #0889b4;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.a-right::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f061";
+}
+
+.patrocionadores h3 {
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0889b4;
+    margin: 10px 0px;
+}
+
+.patrocionadores {
+    margin-bottom: 25px;
+}
+
+.patrocionadores ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.noticias {
+    margin-bottom: 25px;
+}
+
+.noticias h3 {
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0889b4;
+    margin: 10px 0px;
+}
+
+.noticias .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* .noticias .flex-container .row {
+    display: flex;
+} */
+
+.noticias .flex-container .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.noticias .flex-container .row figure {
+    float: left;
+    width: 50px;
+    height: 100px;
+}
+
+.noticias .flex-container .row figure img {
+    margin: 10px 0px;
+    border: solid 3px #0889b4;
+}
+
+.noticias .flex-container .row h4 {
+    font-size: smaller;
+    margin: 4px 0px 8px;
+    color: #0889b4;
+}
+
+.noticias .flex-container .row p {
+    font-size: x-small;
+    color: #9E9B96;
+}
+
+.nube {
+    margin-bottom: 25px;
+}
+
+.nube h3 {
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0889b4;
+    margin: 10px 0px;
+}
+
+.nube p {
+    font-size: smaller;
+    color: #9E9B96;
+}
+
+.galeria ul {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.galeria ul li {
+    border: solid #0889b4;
+    margin: 2px;
+}
 
 
 /*=================================

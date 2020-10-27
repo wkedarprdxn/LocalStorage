@@ -365,7 +365,7 @@ header .section2 ul li:not(:last-child) {
     border-right: solid 5px #949494;
 }
 
-header .section2 ul li:hover {
+header .section2 ul li a:hover {
     background-color: wheat;
 }
 
@@ -398,7 +398,7 @@ main .section1 {
     flex: 80%;
     display: flex;
     flex-wrap: wrap;
-    background-color: #9e927f73;
+    background-color: #d1c9bb;
     margin-right: 10px;
 }
 
@@ -474,6 +474,49 @@ main .section1 .sec-wrap {
     padding: 15px;
     margin: 15px 0px;
     display: flex;
+}
+
+.review figure {
+    margin: 10px;
+    border: solid #0889b4;
+}
+
+.review .wrap-rev ul li {
+    margin: 5px 0px;
+    padding: 6px;
+    position: relative;
+}
+
+.review .wrap-rev ul li h4 {
+    font-size: large;
+    font-weight: bold;
+}
+
+.review .wrap-rev ul li:not(:last-child)::after {
+    content: "";
+    border-left: 2px solid gray;
+    height: 25px;
+    position: absolute;
+    left: 104%;
+    margin-left: -3px;
+    top: 0;
+}
+
+.review .wrap-rev ul li p {
+    font-size: smaller;
+    color: #777676;
+}
+
+.review .wrap-rev ul li a {
+    color: #0889b4;
+}
+
+.review .wrap-rev p {
+    font-size: smaller;
+}
+
+.review:nth-child(3) {
+    margin-left: 85px;
 }
 
 .deja {
@@ -652,8 +695,20 @@ main .section1 .sec-wrap {
     color: #9E9B96;
 }
 
+.noticias .flex-container .row .row-wrap {
+    margin-left: 60px;
+}
+
 .nube {
     margin-bottom: 25px;
+}
+
+.nube .blue {
+    color: #66C6E6;
+}
+
+.nube .large {
+    font-size: large;
 }
 
 .nube h3 {
@@ -687,6 +742,119 @@ main .section1 .sec-wrap {
 /*=================================
   footer styling starts here
 =================================*/
+
+footer {
+    margin-top: -15px;
+    z-index: -1;
+    background-color: #66C6E6;
+    padding-top: 3rem;
+}
+
+footer .flex {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px;
+}
+
+footer .flex .item {
+    margin: 15px;
+}
+
+footer .flex .item h2 {
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    margin: 5px 0px 25px;
+}
+
+footer .flex .item .part-1 p {
+    margin: 10px 0px;
+    font-size: smaller;
+}
+
+footer .flex .item .part-2 p {
+    margin: 10px 0px;
+    font-size: smaller;
+}
+
+footer .flex .item .part-1 p a {
+    color: white;
+}
+
+footer .flex .ipsum-dolor .part-1 p:nth-child(1) {
+    color: white;
+}
+
+footer .flex .ipsum-dolor .part-2 p:nth-child(1) {
+    color: white;
+}
+
+footer .flex .item .part-1 {
+    border-bottom: solid 1px gray;
+}
+
+.lorem-video {
+    overflow: hidden;
+    position: relative;
+}
+
+.lorem-video iframe {
+    width: -webkit-fill-available;
+}
+
+.copy {
+    position: absolute;
+    background-color: wheat;
+    padding-top: 10px;
+    bottom: 0;
+}
+
+.twitteando {
+    position: relative;
+}
+
+.twitteando .part-2 {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+}
+
+.twitteando .part-2 i {
+    padding: 15px;
+    background-color: yellow;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+.twitteando .part-2 i:hover {
+    background-color: orange;
+}
+
+.twitter::before {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    font-size: x-large;
+    content: "\f081";
+}
+
+.facebook::before {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 900;
+    font-size: x-large;
+    content: "\f082";
+}
+
+.wifi::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f143";
+    font-size: x-large;
+}
+
+.contactenos form p {
+    display: inline;
+}
 
 
 /*=================================

@@ -1,886 +1,896 @@
-    @charset "utf-8";
-    /* ==========================================================================
+            @charset "utf-8";
+        /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
-    /* 1.1. Eric Meyers Reset
+        /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
    ========================================================================== */
-    
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    big,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    embed,
-    figure,
-    figcaption,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    output,
-    ruby,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-    }
-    /* HTML5 display-role reset for older browsers */
-    
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section {
-        display: block;
-    }
-    /* Force scrollbar */
-    
-    html {
-        overflow-y: scroll;
-    }
-    /* Align radios and text inputs with their label */
-    
-    input[type='radio'] {
-        vertical-align: text-bottom;
-    }
-    /* Hand cursor on clickable input elements */
-    
-    label,
-    input[type='button'],
-    input[type='submit'],
-    button {
-        cursor: pointer;
-    }
-    
-    strong {
-        font-weight: bold;
-        font-family: inherit;
-        font-size: inherit;
-    }
-    
-    em {
-        font-style: italic;
-    }
-    
-    img {
-        width: 100%;
-        border: 0;
-        vertical-align: middle;
-    }
-    
-    sub,
-    sup {
-        vertical-align: baseline;
-        position: relative;
-        font-size: 55%;
-        line-height: 0;
-    }
-    
-    sup {
-        top: -.7em;
-    }
-    
-    sub {
-        bottom: -.25em;
-    }
-    /* 1.2. Clear Fix
+        
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+        /* Force scrollbar */
+        
+        html {
+            overflow-y: scroll;
+        }
+        /* Align radios and text inputs with their label */
+        
+        input[type='radio'] {
+            vertical-align: text-bottom;
+        }
+        /* Hand cursor on clickable input elements */
+        
+        label,
+        input[type='button'],
+        input[type='submit'],
+        button {
+            cursor: pointer;
+        }
+        
+        strong {
+            font-weight: bold;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        img {
+            width: 100%;
+            border: 0;
+            vertical-align: middle;
+        }
+        
+        sub,
+        sup {
+            vertical-align: baseline;
+            position: relative;
+            font-size: 55%;
+            line-height: 0;
+        }
+        
+        sup {
+            top: -.7em;
+        }
+        
+        sub {
+            bottom: -.25em;
+        }
+        /* 1.2. Clear Fix
    ========================== */
-    
-    .cf:before,
-    .cf:after {
-        display: table;
-        content: " ";
-    }
-    
-    .cf:after {
-        clear: both;
-    }
-    
-    .cf {
-        *zoom: 1;
-    }
-    /*for all*/
-    
-    body {
-        box-sizing: border-box;
-        font-family: sans-serif;
-    }
-    
-    a {
-        display: inline-block;
-        text-decoration: none;
-    }
-    
-    li {
-        display: inline-block;
-        list-style-type: none;
-    }
-    /*for wrapper*/
-    
-    .wrapper {
-        max-width: 1360px;
-        width: 86%;
-        margin: 0 auto;
-    }
-    /*=================================
-  container starts here
-=================================*/
-    
-    @media screen and (min-width: 480px) {
-        .container {
-            max-width: 1060px;
-            width: 80%;
+        
+        .cf:before,
+        .cf:after {
+            display: table;
+            content: " ";
+        }
+        
+        .cf:after {
+            clear: both;
+        }
+        
+        .cf {
+            *zoom: 1;
+        }
+        /*for all*/
+        
+        body {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        a {
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        li {
+            display: inline-block;
+            list-style-type: none;
+        }
+        /*for wrapper*/
+        
+        .wrapper {
+            max-width: 1360px;
+            width: 86%;
             margin: 0 auto;
         }
-    }
-    /*=================================
+        /*=================================
+  container starts here
+=================================*/
+        
+        @media screen and (min-width: 480px) {
+            .container {
+                max-width: 1060px;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        /*=================================
   container ends starts here
 =================================*/
-    /*=================================
+        /*=================================
   Header styling starts here
 =================================*/
-    
-    .icon::before {
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-    }
-    
-    header {
-        display: flex;
-        flex-flow: column;
-    }
-    
-    header .section1 {
-        margin: 0px 50px 50px;
-        display: flex;
-        margin-left: auto;
-    }
-    
-    header .section1 .block {
-        height: 50px;
-        padding: 15px;
-        margin-right: 10px;
-        background: #66C6E6;
-        position: relative;
-    }
-    
-    header .section1 .block i {
-        position: absolute;
-        text-align: center;
-        left: 0;
-        right: 0;
-        bottom: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        color: white;
-        cursor: pointer;
-        transition: transform 1s;
-    }
-    
-    header .section1 .block i:hover {
-        transform: scale(1.5, 1.5);
-    }
-    
-    header .section1 .block:nth-child(1) {
-        display: flex;
-        flex-direction: column;
-        background: none;
-    }
-    
-    header .section1 .block:nth-child(1) .search-box {
-        margin-left: auto;
-        position: relative;
-    }
-    
-    header .section1 .block:nth-child(1) ul li:not(:first-child)::before {
-        content: '';
-        margin-right: 2px;
-        margin-left: 2px;
-        border-left: solid 1px gray;
-    }
-    
-    header .section1 .block:nth-child(1) ul li a {
-        font-size: small;
-        padding: 10px 0px 10px 10px;
-        color: #9E9B96;
-        transition: padding 0.5s;
-    }
-    
-    header .section1 .block:nth-child(1) ul li a:hover {
-        background-color: #66C6E6;
-        padding: 10px 10px 10px 10px;
-        margin-right: -5px;
-        color: white;
-    }
-    
-    .home::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f015";
-    }
-    
-    .message::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f0e0";
-    }
-    
-    .search-box .search {
-        position: absolute;
-        right: 5px;
-        color: white;
-        top: 8px;
-        cursor: pointer;
-        transition: transform 1s;
-    }
-    
-    .search-box .search:hover {
-        transform: scale(1.5, 1.5);
-    }
-    
-    .search-box input {
-        border: none;
-        outline: none;
-        padding: 8px;
-        background: #dddbdb;
-    }
-    
-    .search::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f002";
-    }
-    
-    header .section2 {
-        margin: 20px 0px;
-    }
-    
-    header .section2 ul li {
-        padding: 10px;
-    }
-    
-    header .section2 ul li:not(:last-child) {
-        border-right: solid 5px #949494;
-    }
-    
-    header .section2 ul li a:hover {
-        background-color: wheat;
-    }
-    
-    header .section2 ul li a {
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: large;
-        color: #0889b4;
-    }
-    
-    header .section2 ul li p {
-        color: #9E9B96;
-        font-size: small;
-    }
-    /*=================================
+        
+        .icon::before {
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        header {
+            display: flex;
+            flex-flow: column;
+        }
+        
+        header .section1 {
+            margin: 0px 50px 50px;
+            display: flex;
+            margin-left: auto;
+        }
+        
+        header .section1 .block {
+            height: 50px;
+            padding: 15px;
+            margin-right: 10px;
+            background: #66C6E6;
+            position: relative;
+        }
+        
+        header .section1 .block i {
+            position: absolute;
+            text-align: center;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+            cursor: pointer;
+            transition: transform 1s;
+        }
+        
+        header .section1 .block i:hover {
+            transform: scale(1.5, 1.5);
+        }
+        
+        header .section1 .block:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            background: none;
+        }
+        
+        header .section1 .block:nth-child(1) .search-box {
+            margin-left: auto;
+            position: relative;
+        }
+        
+        header .section1 .block:nth-child(1) ul li:not(:first-child)::before {
+            content: '';
+            margin-right: 2px;
+            margin-left: 2px;
+            border-left: solid 1px gray;
+        }
+        
+        header .section1 .block:nth-child(1) ul li a {
+            font-size: small;
+            padding: 10px 0px 10px 10px;
+            color: #9E9B96;
+            transition: padding 0.5s;
+        }
+        
+        header .section1 .block:nth-child(1) ul li a:hover {
+            background-color: #66C6E6;
+            padding: 10px 10px 10px 10px;
+            margin-right: -5px;
+            color: white;
+        }
+        
+        .home::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f015";
+        }
+        
+        .message::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f0e0";
+        }
+        
+        .search-box .search {
+            position: absolute;
+            right: 5px;
+            color: white;
+            top: 8px;
+            cursor: pointer;
+            transition: transform 1s;
+        }
+        
+        .search-box .search:hover {
+            transform: scale(1.5, 1.5);
+        }
+        
+        .search-box input {
+            border: none;
+            outline: none;
+            padding: 8px;
+            background: #dddbdb;
+        }
+        
+        .search::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f002";
+        }
+        
+        header .section2 {
+            margin: 20px 0px;
+        }
+        
+        header .section2 ul li {
+            padding: 10px;
+        }
+        
+        header .section2 ul li:not(:last-child) {
+            border-right: solid 5px #949494;
+        }
+        
+        header .section2 ul li a:hover {
+            background-color: wheat;
+        }
+        
+        header .section2 ul li a {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: large;
+            color: #0889b4;
+        }
+        
+        header .section2 ul li p {
+            color: #9E9B96;
+            font-size: small;
+        }
+        /*=================================
   Header styling ends here
 =================================*/
-    /*=================================
+        /*=================================
   main styling starts here
 =================================*/
-    
-    main {
-        display: flex;
-    }
-    
-    main .section1 {
-        flex: 80%;
-        display: flex;
-        flex-wrap: wrap;
-        background-color: #d1c9bb;
-        margin-right: 10px;
-    }
-    
-    main .section2 {
-        flex: 20%;
-    }
-    
-    main .section1 .sec-wrap {
-        display: flex;
-    }
-    
-    .sec-1 {
-        border-right: solid 1px #949494;
-        padding: 15px;
-        text-align: right;
-        font-size: small;
-        height: 50rem;
-    }
-    
-    .sec-1 li {
-        margin: 22px 0px;
-    }
-    
-    .sec-1 li:nth-child(1) h3 {
-        font-size: x-large;
-        color: #0889b4;
-        font-weight: bolder;
-    }
-    
-    .sec-1 li h3 {
-        font-size: x-large;
-        font-weight: bolder;
-    }
-    
-    .sec-1 li h4 {
-        font-size: larger;
-        font-weight: bold;
-    }
-    
-    .sec-2 {
-        padding: 0px 20px;
-    }
-    
-    .sec-2 h2 {
-        font-size: x-large;
-        margin: 15px 0px 25px;
-    }
-    
-    .sec-2 p {
-        font-size: small;
-        line-height: 1rem;
-        margin: 15px 0px;
-    }
-    
-    .sec-2 figure {
-        margin: 20px 0px;
-    }
-    
-    .r-arrow::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f061";
-    }
-    
-    .comentarios h3 {
-        font-size: x-large;
-        font-weight: bold;
-        color: #0889b4;
-        margin: 20px 25px;
-    }
-    
-    .review {
-        padding: 15px;
-        margin: 15px 0px;
-        display: flex;
-    }
-    
-    .review figure {
-        margin: 10px;
-        border: solid #0889b4;
-    }
-    
-    .review .wrap-rev ul li {
-        margin: 5px 0px;
-        padding: 6px;
-        position: relative;
-    }
-    
-    .review .wrap-rev ul li h4 {
-        font-size: large;
-        font-weight: bold;
-    }
-    
-    .review .wrap-rev ul li:not(:last-child)::after {
-        content: "";
-        border-left: 2px solid gray;
-        height: 25px;
-        position: absolute;
-        left: 104%;
-        margin-left: -3px;
-        top: 0;
-    }
-    
-    .review .wrap-rev ul li p {
-        font-size: smaller;
-        color: #777676;
-    }
-    
-    .review .wrap-rev ul li a {
-        color: #0889b4;
-    }
-    
-    .review .wrap-rev p {
-        font-size: smaller;
-    }
-    
-    .review:nth-child(3) {
-        margin-left: 85px;
-    }
-    
-    .deja {
-        width: 100%;
-    }
-    
-    .deja h2 {
-        font-size: x-large;
-        margin: 20px 25px;
-    }
-    
-    .deja form {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    
-    .deja form .part1,
-    .part2 {
-        padding: 20px;
-    }
-    
-    .deja form .part1 {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .deja form .part1 p {
-        font-size: smaller;
-        margin: 8px 0px 2px;
-        color: #777676;
-    }
-    
-    .deja form .part1 input {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        border: none;
-        outline: none;
-    }
-    
-    .deja form .part1 input[type~="submit"] {
-        all: unset;
-        font-weight: bolder;
-        padding: 10px;
-        background-color: rgb(158, 132, 83);
-        color: white;
-        margin: 10px 0px;
-        margin-left: auto;
-        cursor: pointer;
-        transition: font-size 1s;
-    }
-    
-    .deja form .part1 input[type~="submit"]:hover {
-        background-color: #66C6E6;
-        font-size: larger;
-    }
-    
-    .deja form .part2 p {
-        font-size: smaller;
-        margin: 8px 0px 2px;
-        color: #777676;
-    }
-    
-    .deja form .part2 textarea {
-        display: block;
-        width: 94%;
-        padding: 10px;
-        border: none;
-        outline: none;
-    }
-    /* ++++++++++++++ section 1 end ++++++++++++++++ */
-    
-    .ingrese {
-        margin-bottom: 25px;
-    }
-    
-    .ingrese p {
-        text-align: right;
-        font-size: small;
-        color: #0889b4;
-    }
-    
-    .search-blue {
-        position: relative;
-        display: grid;
-    }
-    
-    .search-blue input {
-        border: solid 4px #0889b4;
-        padding: 5px;
-        outline: none;
-    }
-    
-    .search-blue .a-right {
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        background-color: #0889b4;
-        padding: 5px 10px;
-        color: white;
-        cursor: pointer;
-        font-weight: bolder;
-    }
-    
-    .a-right::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f061";
-    }
-    
-    .patrocionadores h3 {
-        font-size: larger;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: #0889b4;
-        margin: 10px 0px;
-    }
-    
-    .patrocionadores {
-        margin-bottom: 25px;
-    }
-    
-    .patrocionadores ul {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5px;
-    }
-    
-    .noticias {
-        margin-bottom: 25px;
-    }
-    
-    .noticias h3 {
-        font-size: larger;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: #0889b4;
-        margin: 10px 0px;
-    }
-    
-    .noticias .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    /* .noticias .flex-container .row {
-    display: flex;
-} */
-    
-    .noticias .flex-container .row::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-    
-    .noticias .flex-container .row figure {
-        float: left;
-        width: 50px;
-        height: 100px;
-    }
-    
-    .noticias .flex-container .row figure img {
-        margin: 10px 0px;
-        border: solid 3px #0889b4;
-    }
-    
-    .noticias .flex-container .row h4 {
-        font-size: smaller;
-        margin: 4px 0px 8px;
-        color: #0889b4;
-    }
-    
-    .noticias .flex-container .row p {
-        font-size: x-small;
-        color: #9E9B96;
-    }
-    
-    .noticias .flex-container .row .row-wrap {
-        margin-left: 60px;
-    }
-    
-    .nube {
-        margin-bottom: 25px;
-    }
-    
-    .nube .blue {
-        color: #66C6E6;
-    }
-    
-    .nube .large {
-        font-size: large;
-    }
-    
-    .nube h3 {
-        font-size: larger;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: #0889b4;
-        margin: 10px 0px;
-    }
-    
-    .nube p {
-        font-size: smaller;
-        color: #9E9B96;
-    }
-    
-    .galeria ul {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-    
-    .galeria ul li {
-        border: solid #0889b4;
-        margin: 2px;
-    }
-    /*=================================
-  main styling ends here
-=================================*/
-    /*=================================
-  footer styling starts here
-=================================*/
-    
-    footer {
-        margin-top: -15px;
-        z-index: -1;
-        background-color: #66C6E6;
-        padding-top: 3rem;
-    }
-    
-    footer .flex {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 5px;
-    }
-    
-    footer .flex .item {
-        margin: 15px;
-    }
-    
-    footer .flex .item h2 {
-        font-size: x-large;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: white;
-        margin: 5px 0px 25px;
-    }
-    
-    footer .flex .item .part-1 p {
-        margin: 10px 0px;
-        font-size: smaller;
-    }
-    
-    footer .flex .item .part-2 p {
-        margin: 10px 0px;
-        font-size: smaller;
-    }
-    
-    footer .flex .item .part-1 p a {
-        color: white;
-    }
-    
-    footer .flex .ipsum-dolor .part-1 p:nth-child(1) {
-        color: white;
-    }
-    
-    footer .flex .ipsum-dolor .part-2 p:nth-child(1) {
-        color: white;
-    }
-    
-    footer .flex .item .part-1 {
-        border-bottom: solid 1px gray;
-    }
-    
-    .lorem-video {
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .lorem-video iframe {
-        width: -webkit-fill-available;
-    }
-    
-    .copy {
-        position: absolute;
-        background-color: wheat;
-        padding-top: 10px;
-        bottom: 0;
-    }
-    
-    .twitteando {
-        position: relative;
-    }
-    
-    .twitteando .part-2 {
-        position: absolute;
-        bottom: 30px;
-        right: 0;
-    }
-    
-    .twitteando .part-2 i {
-        padding: 15px;
-        background-color: yellow;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: background-color .5s;
-    }
-    
-    .twitteando .part-2 i:hover {
-        background-color: orange;
-    }
-    
-    .twitter::before {
-        font-family: "Font Awesome 5 Brands";
-        font-weight: 400;
-        font-size: x-large;
-        content: "\f081";
-    }
-    
-    .facebook::before {
-        font-family: "Font Awesome 5 Brands";
-        font-weight: 900;
-        font-size: x-large;
-        content: "\f082";
-    }
-    
-    .wifi::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f143";
-        font-size: x-large;
-    }
-    
-    .contactenos form {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 5px;
-    }
-    
-    .contactenos form input {
-        outline: none;
-        border: none;
-        padding: 5px;
-        width: 100%;
-    }
-    
-    .contactenos form textarea {
-        width: 97%;
-        outline: none;
-        border: none;
-        padding: 10px;
-    }
-    
-    .contactenos form .a-right {
-        font-size: x-large;
-        color: white;
-    }
-    
-    .contactenos form button {
-        grid-column-start: 2;
-        margin-left: auto;
-        width: 30%;
-        outline: none;
-        border: none;
-        background-color: #0889b4;
-        padding: 8px 0px;
-        transition: background-color 0.5s;
-    }
-    
-    .contactenos form button:hover {
-        background-color: orange;
-    }
-    
-    .contactenos form p {
-        background-color: #0889b4;
-        display: inline;
-        color: #66C6E6;
-        padding: 10px;
-    }
-    /*=================================
-  footer styling ends here
-=================================*/
-    /*media query starts*/
-    /*media query for 995px starts here*/
-    
-    @media only screen and (max-width: 995px) {
+        
         main {
+            display: flex;
+        }
+        
+        main .section1 {
+            flex: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #d1c9bb;
+            margin-right: 10px;
+        }
+        
+        main .section2 {
+            flex: 20%;
+        }
+        
+        main .section1 .sec-wrap {
+            display: flex;
+        }
+        
+        .sec-1 {
+            border-right: solid 1px #949494;
+            padding: 15px;
+            text-align: right;
+            font-size: small;
+            height: 50rem;
+        }
+        
+        .sec-1 li {
+            margin: 22px 0px;
+        }
+        
+        .sec-1 li:nth-child(1) h3 {
+            font-size: x-large;
+            color: #0889b4;
+            font-weight: bolder;
+        }
+        
+        .sec-1 li h3 {
+            font-size: x-large;
+            font-weight: bolder;
+        }
+        
+        .sec-1 li h4 {
+            font-size: larger;
+            font-weight: bold;
+        }
+        
+        .sec-2 {
+            padding: 0px 20px;
+        }
+        
+        .sec-2 h2 {
+            font-size: x-large;
+            margin: 15px 0px 25px;
+        }
+        
+        .sec-2 p {
+            font-size: small;
+            line-height: 1rem;
+            margin: 15px 0px;
+        }
+        
+        .sec-2 figure {
+            margin: 20px 0px;
+        }
+        
+        .r-arrow::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f061";
+        }
+        
+        .comentarios h3 {
+            font-size: x-large;
+            font-weight: bold;
+            color: #0889b4;
+            margin: 20px 25px;
+        }
+        
+        .review {
+            padding: 15px;
+            margin: 15px 0px;
+            display: flex;
+        }
+        
+        .review figure {
+            margin: 10px;
+            border: solid #0889b4;
+        }
+        
+        .review .wrap-rev ul li {
+            margin: 5px 0px;
+            padding: 6px;
+            position: relative;
+        }
+        
+        .review .wrap-rev ul li h4 {
+            font-size: large;
+            font-weight: bold;
+        }
+        
+        .review .wrap-rev ul li:not(:last-child)::after {
+            content: "";
+            border-left: 2px solid gray;
+            height: 25px;
+            position: absolute;
+            left: 104%;
+            margin-left: -3px;
+            top: 0;
+        }
+        
+        .review .wrap-rev ul li p {
+            font-size: smaller;
+            color: #777676;
+        }
+        
+        .review .wrap-rev ul li a {
+            color: #0889b4;
+        }
+        
+        .review .wrap-rev p {
+            font-size: smaller;
+        }
+        
+        .review:nth-child(3) {
+            margin-left: 85px;
+        }
+        
+        .deja {
+            width: 100%;
+        }
+        
+        .deja h2 {
+            font-size: x-large;
+            margin: 20px 25px;
+        }
+        
+        .deja form {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        
+        .deja form .part1,
+        .part2 {
+            padding: 20px;
+        }
+        
+        .deja form .part1 {
+            display: flex;
             flex-wrap: wrap;
         }
+        
+        .deja form .part1 p {
+            font-size: smaller;
+            margin: 8px 0px 2px;
+            color: #777676;
+        }
+        
+        .deja form .part1 input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        
+        .deja form .part1 input[type~="submit"] {
+            all: unset;
+            font-weight: bolder;
+            padding: 10px;
+            background-color: rgb(158, 132, 83);
+            color: white;
+            margin: 10px 0px;
+            margin-left: auto;
+            cursor: pointer;
+            transition: font-size 1s;
+        }
+        
+        .deja form .part1 input[type~="submit"]:hover {
+            background-color: #66C6E6;
+            font-size: larger;
+        }
+        
+        .deja form .part2 p {
+            font-size: smaller;
+            margin: 8px 0px 2px;
+            color: #777676;
+        }
+        
+        .deja form .part2 textarea {
+            display: block;
+            width: 94%;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        /* ++++++++++++++ section 1 end ++++++++++++++++ */
+        
+        .ingrese {
+            margin-bottom: 25px;
+        }
+        
+        .ingrese p {
+            text-align: right;
+            font-size: small;
+            color: #0889b4;
+        }
+        
+        .search-blue {
+            position: relative;
+            display: grid;
+        }
+        
+        .search-blue input {
+            border: solid 4px #0889b4;
+            padding: 5px;
+            outline: none;
+        }
+        
+        .search-blue .a-right {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            background-color: #0889b4;
+            padding: 5px 10px;
+            color: white;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+        
+        .a-right::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f061";
+        }
+        
+        .patrocionadores h3 {
+            font-size: larger;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #0889b4;
+            margin: 10px 0px;
+        }
+        
+        .patrocionadores {
+            margin-bottom: 25px;
+        }
+        
         .patrocionadores ul {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 5px;
         }
-        .ingrese p {
-            margin-top: 30px;
+        
+        .noticias {
+            margin-bottom: 25px;
         }
-    }
+        
+        .noticias h3 {
+            font-size: larger;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #0889b4;
+            margin: 10px 0px;
+        }
+        
+        .noticias .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* .noticias .flex-container .row {
+    display: flex;
+} */
+        
+        .noticias .flex-container .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .noticias .flex-container .row figure {
+            float: left;
+            width: 50px;
+            height: 100px;
+        }
+        
+        .noticias .flex-container .row figure img {
+            margin: 10px 0px;
+            border: solid 3px #0889b4;
+        }
+        
+        .noticias .flex-container .row h4 {
+            font-size: smaller;
+            margin: 4px 0px 8px;
+            color: #0889b4;
+        }
+        
+        .noticias .flex-container .row p {
+            font-size: x-small;
+            color: #9E9B96;
+        }
+        
+        .noticias .flex-container .row .row-wrap {
+            margin-left: 60px;
+        }
+        
+        .nube {
+            margin-bottom: 25px;
+        }
+        
+        .nube .blue {
+            color: #66C6E6;
+        }
+        
+        .nube .large {
+            font-size: large;
+        }
+        
+        .nube h3 {
+            font-size: larger;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #0889b4;
+            margin: 10px 0px;
+        }
+        
+        .nube p {
+            font-size: smaller;
+            color: #9E9B96;
+        }
+        
+        .galeria ul {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+        
+        .galeria ul li {
+            border: solid #0889b4;
+            margin: 2px;
+        }
+        /*=================================
+  main styling ends here
+=================================*/
+        /*=================================
+  footer styling starts here
+=================================*/
+        
+        footer {
+            margin-top: -15px;
+            z-index: -1;
+            background-color: #66C6E6;
+            padding-top: 3rem;
+        }
+        
+        footer .flex {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 5px;
+        }
+        
+        footer .flex .item {
+            margin: 15px;
+        }
+        
+        footer .flex .item h2 {
+            font-size: x-large;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+            margin: 5px 0px 25px;
+        }
+        
+        footer .flex .item .part-1 p {
+            margin: 10px 0px;
+            font-size: smaller;
+        }
+        
+        footer .flex .item .part-2 p {
+            margin: 10px 0px;
+            font-size: smaller;
+        }
+        
+        footer .flex .item .part-1 p a {
+            color: white;
+        }
+        
+        footer .flex .ipsum-dolor .part-1 p:nth-child(1) {
+            color: white;
+        }
+        
+        footer .flex .ipsum-dolor .part-2 p:nth-child(1) {
+            color: white;
+        }
+        
+        footer .flex .item .part-1 {
+            border-bottom: solid 1px gray;
+        }
+        
+        .lorem-video {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .lorem-video iframe {
+            width: -webkit-fill-available;
+        }
+        
+        .copy {
+            position: absolute;
+            background-color: wheat;
+            padding-top: 10px;
+            bottom: 0;
+        }
+        
+        .twitteando {
+            position: relative;
+        }
+        
+        .twitteando .part-2 {
+            position: absolute;
+            bottom: 30px;
+            right: 0;
+        }
+        
+        .twitteando .part-2 i {
+            padding: 15px;
+            background-color: yellow;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color .5s;
+        }
+        
+        .twitteando .part-2 i:hover {
+            background-color: orange;
+        }
+        
+        .twitter::before {
+            font-family: "Font Awesome 5 Brands";
+            font-weight: 400;
+            font-size: x-large;
+            content: "\f081";
+        }
+        
+        .facebook::before {
+            font-family: "Font Awesome 5 Brands";
+            font-weight: 900;
+            font-size: x-large;
+            content: "\f082";
+        }
+        
+        .wifi::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f143";
+            font-size: x-large;
+        }
+        
+        .contactenos form {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 5px;
+        }
+        
+        .contactenos form input {
+            outline: none;
+            border: none;
+            padding: 5px;
+            width: 100%;
+        }
+        
+        .contactenos form textarea {
+            width: 97%;
+            outline: none;
+            border: none;
+            padding: 10px;
+        }
+        
+        .contactenos form .a-right {
+            font-size: x-large;
+            color: white;
+        }
+        
+        .contactenos form button {
+            grid-column-start: 2;
+            margin-left: auto;
+            width: 30%;
+            outline: none;
+            border: none;
+            background-color: #0889b4;
+            padding: 8px 0px;
+            transition: background-color 0.5s;
+        }
+        
+        .contactenos form button:hover {
+            background-color: orange;
+        }
+        
+        .contactenos form p {
+            background-color: #0889b4;
+            display: inline;
+            color: #66C6E6;
+            padding: 10px;
+        }
+        /*=================================
+  footer styling ends here
+=================================*/
+        /*media query starts*/
+        /*media query for 995px starts here*/
+        
+        @media only screen and (max-width: 995px) {
+            main {
+                flex-wrap: wrap;
+            }
+            .patrocionadores ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 5px;
+            }
+            .ingrese p {
+                margin-top: 30px;
+            }
+            footer .flex {
+                display: grid;
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                gap: 5px;
+            }
+            .twitteando .part-2 {
+                bottom: -24px;
+            }
+            .review:nth-child(3) {
+                margin-left: 30px;
+            }
